@@ -1,0 +1,276 @@
+/* ===== Global reset ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #F4F7F1;
+  --surface: #FFFFFF;
+  --ink: #23301F;
+  --ink-soft: #55654E;
+  --fox: #D9622B;
+  --fox-dark: #A93F15;
+  --moss: #4C6B4F;
+  --line: #DDE6D7;
+  --chip-bg: #E9F0E4;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: 'Manrope', sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+h1, h2 {
+  font-family: 'Fraunces', serif;
+  color: var(--ink);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ===== Nav ===== */
+.site-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 28px;
+  padding: 18px 24px;
+  background-color: var(--surface);
+  border-bottom: 1px solid var(--line);
+}
+
+.site-nav a {
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--ink-soft);
+  padding-bottom: 3px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.site-nav a:hover {
+  color: var(--fox-dark);
+  border-bottom-color: var(--fox);
+}
+
+/* ===== Hero / header ===== */
+.hero {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 72px 24px 56px;
+}
+
+.avatar {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  box-shadow: 0 12px 30px rgba(169, 63, 21, 0.18);
+  border: 6px solid var(--surface);
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 480px;
+}
+
+.eyebrow {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--fox-dark);
+}
+
+.intro h1 {
+  font-size: clamp(32px, 5vw, 44px);
+  font-weight: 600;
+  line-height: 1.15;
+  margin-top: 4px;
+}
+
+.role {
+  font-size: 17px;
+  color: var(--ink-soft);
+  font-weight: 500;
+  margin-top: 6px;
+}
+
+.slogan {
+  margin-top: 14px;
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 18px;
+  color: var(--moss);
+}
+
+/* ===== Main sections ===== */
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+section, footer {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 44px 24px;
+  width: 100%;
+}
+
+section h2, footer h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.about p {
+  color: var(--ink-soft);
+}
+
+.about p + p {
+  margin-top: 14px;
+}
+
+/* ===== Education timeline ===== */
+.timeline {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.timeline li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 6px 20px;
+  padding: 16px 20px;
+  background-color: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+
+.timeline .years {
+  font-weight: 700;
+  color: var(--fox-dark);
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.timeline .place {
+  font-weight: 500;
+}
+
+/* ===== Skills chips ===== */
+.chip-list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skill {
+  display: inline-block;
+  background-color: var(--chip-bg);
+  color: var(--moss);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 9px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.2s ease, transform 0.2s ease, color 0.2s ease;
+}
+
+.skill:hover {
+  background-color: var(--fox);
+  color: var(--surface);
+  transform: translateY(-2px);
+}
+
+/* ===== Contacts / footer ===== */
+.contacts {
+  background-color: var(--surface);
+  border-top: 1px solid var(--line);
+  max-width: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  padding: 56px 24px 40px;
+}
+
+.contact-list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.contact-text {
+  font-weight: 500;
+  color: var(--ink-soft);
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.contact-text:hover {
+  color: var(--fox-dark);
+  border-bottom-color: var(--fox);
+}
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 26px;
+  border: 2px solid var(--fox);
+  border-radius: 999px;
+  font-weight: 700;
+  color: var(--fox-dark);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.contact-link:hover {
+  background-color: var(--fox);
+  color: var(--surface);
+}
+
+.footnote {
+  font-size: 13px;
+  color: var(--ink-soft);
+  text-align: center;
+}
+
+.copyright {
+  font-size: 13px;
+  color: var(--ink-soft);
+  text-align: center;
+}
