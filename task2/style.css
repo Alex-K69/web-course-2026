@@ -1,4 +1,3 @@
-/* ============ Reset & base ============ */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -56,7 +55,6 @@ svg {
   color: var(--accent);
 }
 
-/* ============ Buttons ============ */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -103,7 +101,6 @@ svg {
   width: 100%;
 }
 
-/* ============ Header / nav (Flexbox for the component) ============ */
 .site-header {
   position: sticky;
   top: 0;
@@ -197,7 +194,6 @@ svg {
   display: none;
 }
 
-/* ============ Hero (Grid for section layout) ============ */
 .hero {
   max-width: 1240px;
   margin: 0 auto;
@@ -236,7 +232,6 @@ svg {
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
 }
 
-/* ============ Features (Grid for the card grid, Flexbox inside each card) ============ */
 .features {
   max-width: 1240px;
   margin: 0 auto;
@@ -303,7 +298,6 @@ svg {
   font-size: 14px;
 }
 
-/* ============ Why matters (Grid for section layout) ============ */
 .why-matters {
   max-width: 1240px;
   margin: 0 auto;
@@ -335,7 +329,6 @@ svg {
   margin-bottom: 22px;
 }
 
-/* ============ Pricing (Grid for the card grid, Flexbox inside each card) ============ */
 .pricing {
   max-width: 1240px;
   margin: 0 auto;
@@ -428,7 +421,6 @@ svg {
   color: var(--accent);
 }
 
-/* ============ Contact form (Flexbox for the form layout) ============ */
 .contact {
   max-width: 640px;
   margin: 0 auto;
@@ -497,7 +489,6 @@ svg {
   box-shadow: 0 0 0 3px rgba(47, 200, 255, 0.18);
 }
 
-/* ============ Footer (Grid for column layout, Flexbox inside columns) ============ */
 .site-footer {
   border-top: 1px solid var(--card-border);
   padding: 48px 20px 24px;
@@ -560,9 +551,6 @@ svg {
   font-size: 13px;
 }
 
-/* ============================================================
-   TABLET — 768px and up
-   ============================================================ */
 @media (min-width: 768px) {
 
   .hamburger,
@@ -605,9 +593,6 @@ svg {
   }
 }
 
-/* ============================================================
-   DESKTOP — 1200px and up
-   ============================================================ */
 @media (min-width: 1200px) {
 
   .hero {

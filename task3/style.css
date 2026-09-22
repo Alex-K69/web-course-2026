@@ -1,0 +1,165 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #0f1420;
+  color: #eef1f8;
+  font-family: -apple-system, "Segoe UI", Roboto, sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 520px;
+  padding: 40px 20px 80px;
+}
+
+h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 500;
+  font-size: 28px;
+  margin: 0 0 24px;
+}
+
+/* --- поле ввода --- */
+
+.input-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+#taskInput {
+  flex-grow: 1;
+  background: #161c2c;
+  border: 1px solid #2a3247;
+  border-radius: 10px;
+  color: #eef1f8;
+  font-size: 15px;
+  padding: 11px 14px;
+}
+
+#taskInput:focus {
+  outline: none;
+  border-color: #e3a865;
+}
+
+#addBtn {
+  background: #e3a865;
+  color: #0f1420;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 0 20px;
+  cursor: pointer;
+}
+
+#addBtn:hover {
+  opacity: 0.9;
+}
+
+.warning {
+  min-height: 18px;
+  color: #e06666;
+  font-size: 13px;
+  margin-bottom: 14px;
+}
+
+/* --- фильтры --- */
+
+.filters {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.filter-btn {
+  background: #161c2c;
+  border: 1px solid #2a3247;
+  color: #9aa3ba;
+  border-radius: 20px;
+  font-size: 13px;
+  padding: 6px 14px;
+  cursor: pointer;
+}
+
+.filter-btn.active {
+  background: #1c2338;
+  border-color: #e3a865;
+  color: #eef1f8;
+}
+
+/* --- список задач --- */
+
+.task-list {
+  list-style: none;
+  margin: 0 0 18px;
+  padding: 0;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 4px;
+  border-top: 1px solid #2a3247;
+}
+
+.task-item:last-child {
+  border-bottom: 1px solid #2a3247;
+}
+
+.task-item input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #e3a865;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.task-item .task-text {
+  flex-grow: 1;
+  font-size: 15px;
+  word-break: break-word;
+}
+
+/* класс, который лаба просит для выполненных задач */
+.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.delete-btn {
+  background: none;
+  border: 1px solid #2a3247;
+  color: #9aa3ba;
+  border-radius: 8px;
+  font-size: 12px;
+  padding: 5px 10px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.delete-btn:hover {
+  border-color: #e06666;
+  color: #e06666;
+}
+
+.empty-state {
+  color: #616a83;
+  font-size: 14px;
+  text-align: center;
+  padding: 24px 0;
+}
+
+/* --- счётчик --- */
+
+.stats {
+  color: #9aa3ba;
+  font-size: 13.5px;
+}
