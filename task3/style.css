@@ -25,8 +25,6 @@ h1 {
   margin: 0 0 24px;
 }
 
-/* --- поле ввода --- */
-
 .input-row {
   display: flex;
   gap: 10px;
@@ -70,8 +68,6 @@ h1 {
   margin-bottom: 14px;
 }
 
-/* --- фильтры --- */
-
 .filters {
   display: flex;
   gap: 8px;
@@ -93,8 +89,6 @@ h1 {
   border-color: #e3a865;
   color: #eef1f8;
 }
-
-/* --- список задач --- */
 
 .task-list {
   list-style: none;
@@ -128,7 +122,6 @@ h1 {
   word-break: break-word;
 }
 
-/* класс, который лаба просит для выполненных задач */
 .completed {
   text-decoration: line-through;
   opacity: 0.6;
@@ -156,8 +149,6 @@ h1 {
   text-align: center;
   padding: 24px 0;
 }
-
-/* --- счётчик --- */
 
 .stats {
   color: #9aa3ba;

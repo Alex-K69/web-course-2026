@@ -1,0 +1,73 @@
+:root {
+  --bg: #1f2a24;
+  --panel: #2b3a32;
+  --text: #f1ead8;
+  --muted: #a9b8ad;
+  --accent: #e0b04a;
+  --bull: #e0b04a;
+  --cow: #d98e73;
+  --error: #ff8a7a;
+  --win: #8fd694;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 32px 16px;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Georgia, "Times New Roman", serif;
+}
+.game {
+  width: 100%;
+  max-width: 480px;
+  background: var(--panel);
+  padding: 28px;
+  border-radius: 12px;
+}
+h1 { margin: 0 0 6px; font-size: 2rem; }
+.hint { margin: 0 0 20px; color: var(--muted); }
+.controls { display: flex; gap: 8px; flex-wrap: wrap; }
+input {
+  flex: 1 1 120px;
+  min-width: 0;
+  padding: 10px 12px;
+  font: 1.4rem/1 "Courier New", monospace;
+  letter-spacing: .3em;
+  text-align: center;
+  border: 2px solid var(--muted);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--text);
+}
+input:disabled { opacity: .5; }
+button {
+  padding: 10px 16px;
+  font: inherit;
+  font-weight: bold;
+  border: 0;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #2a2110;
+  cursor: pointer;
+}
+button.secondary { background: transparent; color: var(--text); border: 2px solid var(--muted); }
+button:disabled { opacity: .5; cursor: not-allowed; }
+button:focus-visible, input:focus-visible { outline: 3px solid var(--text); outline-offset: 2px; }
+.message { min-height: 1.5em; margin: 14px 0 4px; }
+.message.error { color: var(--error); }
+.message.win { color: var(--win); font-weight: bold; font-size: 1.15rem; }
+.counter { margin: 0 0 12px; color: var(--muted); }
+.history { list-style: none; margin: 0; padding: 0; max-height: 320px; overflow-y: auto; }
+.history li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255,255,255,.12);
+}
+.history .num { font-family: "Courier New", monospace; letter-spacing: .2em; }
+.history .bulls { color: var(--bull); }
+.history .cows { color: var(--cow); }

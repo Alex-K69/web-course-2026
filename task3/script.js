@@ -1,10 +1,7 @@
-// --- состояние приложения ---
-// единственный источник правды: массив объектов задач
 let tasks = [];
-let nextId = 1;          // счётчик для уникальных id
-let currentFilter = "all"; // "all" | "active" | "completed"
+let nextId = 1;
+let currentFilter = "all";
 
-// --- элементы DOM ---
 const taskInput = document.getElementById("taskInput");
 const addBtn = document.getElementById("addBtn");
 const warningEl = document.getElementById("warning");
@@ -12,7 +9,6 @@ const taskListEl = document.getElementById("taskList");
 const statsEl = document.getElementById("stats");
 const filterBtns = document.querySelectorAll(".filter-btn");
 
-// --- добавление задачи ---
 function addTask() {
   const text = taskInput.value.trim();
 
@@ -39,10 +35,7 @@ function deleteTask(id) {
   render();
 }
 
-// --- рендер: единственное место, где список рисуется на экране ---
-// вызывается после любого изменения данных, DOM всегда строится заново из tasks[]
 function render() {
-  // какие задачи показывать при текущем фильтре
   const visibleTasks = tasks.filter((t) => {
     if (currentFilter === "active") return !t.completed;
     if (currentFilter === "completed") return t.completed;
@@ -80,13 +73,11 @@ function render() {
     taskListEl.appendChild(li);
   });
 
-  // счётчик: считаем через filter, а не храним отдельно, чтобы не рассинхронизироваться
   const activeCount = tasks.filter((t) => !t.completed).length;
   const doneCount = tasks.filter((t) => t.completed).length;
   statsEl.textContent = `Осталось: ${activeCount}, Выполнено: ${doneCount}`;
 }
 
-// --- обработчики событий ---
 addBtn.addEventListener("click", addTask);
 
 taskInput.addEventListener("keydown", (e) => {
