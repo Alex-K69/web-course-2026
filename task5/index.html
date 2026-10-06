@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Симон говорит</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="stage">
+    <h1 class="title">Симон говорит</h1>
+    <p id="status" class="status" role="status">Нажмите «Старт», чтобы начать</p>
+
+    <div class="dial">
+      <button class="pad pad-0" type="button" data-slot="0" aria-label="Розовый" disabled></button>
+      <button class="pad pad-1" type="button" data-slot="1" aria-label="Жёлтый" disabled></button>
+      <button class="pad pad-2" type="button" data-slot="2" aria-label="Бирюзовый" disabled></button>
+      <button class="pad pad-3" type="button" data-slot="3" aria-label="Синий" disabled></button>
+      <div class="hub">
+        <span class="hub-label">уровень</span>
+        <span id="level" class="hub-level">0</span>
+      </div>
+    </div>
+
+    <button id="start" class="start" type="button">Старт</button>
+  </main>
+</body>
+</html>
